@@ -7,8 +7,8 @@ opts="$opts --quiet"
 emerge $opts --sync
 emerge $opts --unmerge sys-fs/eudev
 echo ">=sys-apps/dbus-1.10.12 systemd"  > /etc/portage/package.use/iputils
-emerge $opts --pretend --tree sys-apps/systemd
-emerge $opts sys-apps/systemd
+emerge $opts --pretend --tree --verbose sys-apps/systemd
+emerge $opts --noreplace sys-apps/systemd
 
 end=$(TZ="Asia/Taipei" date --iso-8601=second)
 
