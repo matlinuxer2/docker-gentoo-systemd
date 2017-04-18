@@ -9,6 +9,7 @@ emerge $opts --unmerge sys-fs/eudev
 echo ">=sys-apps/dbus-1.10.12 systemd"  > /etc/portage/package.use/iputils
 emerge $opts --pretend --tree --verbose sys-apps/systemd
 
+emerge $opts sys-apps/systemd
 for (( x=1; x<=3; x++ ))
 do
     emerge $opts --keep-going --skip-first sys-apps/systemd
