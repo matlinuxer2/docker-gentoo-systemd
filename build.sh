@@ -7,6 +7,7 @@ opts="$opts --quiet"
 emerge $opts --sync
 emerge $opts --unmerge sys-fs/eudev
 echo ">=sys-apps/dbus-1.10.12 systemd"  > /etc/portage/package.use/iputils
+echo "sys-libs/pam" > /etc/portage/package.mask
 emerge $opts --pretend --tree --verbose sys-apps/systemd
 
 emerge $opts sys-apps/systemd
